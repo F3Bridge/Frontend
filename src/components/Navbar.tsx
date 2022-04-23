@@ -51,7 +51,7 @@ export default function Example() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-violet-900 text-white' : 'text-white hover:bg-violet-700 hover:text-white',
+                          item.current ? 'bg-violet-900 text-white' : 'text-white hover:bg-[#C6DEA6] hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -71,7 +71,7 @@ export default function Example() {
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
                 </button>*/}
 
-				<button type="button" className='bg-transparent hover:bg-violet-700 hover:text-white py-2 px-4 border border-gray-200 hover:border-gray-900 rounded shadow-sm'>
+				<button type="button" className='bg-transparent hover:bg-blue-600 hover:text-white py-2 px-4 border border-gray-200 hover:border-gray-900 rounded shadow-sm'>
 					<span className='text-white font-medium'>Connect Wallet</span>
 				</button>
 
