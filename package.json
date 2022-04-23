@@ -23,6 +23,8 @@
     "@web3-react/url": "8.0.17-beta.0",
     "@web3-react/walletconnect": "8.0.26-beta.0",
     "@web3auth/web3auth": "^0.9.3",
+    "bowser": "^2.11.0",
+    "esbuild": "^0.14.38",
     "ethers": "^5.6.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
