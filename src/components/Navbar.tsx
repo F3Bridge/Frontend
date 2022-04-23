@@ -7,10 +7,11 @@ import { Web3Provider } from "@ethersproject/providers";
 
 const navigation = [
   //  { name: 'Dashboard', href: '#', current: true },
-  { name: "Profile", href: "#", current: false },
+  { name: "Profile", href: "/", current: false },
   { name: "Frens", href: "/FriendsPage", current: false },
   { name: "Communities", href: "/CommunitiesPage", current: false },
   { name: "Discord", href: "/DiscordPage", current: false },
+  { name: "Superfluid", href: "/Superfluid", current: false },
 ];
 
 function classNames(...classes: string[]) {

@@ -21,6 +21,7 @@ export function HomePage() {
   return (
     <div className="min-h-screen text-xl text-pink-700 bg-yellow-300">
       <Link to="/friends">(Click here to go to friendSsS page)</Link>
+      <Link to="/superfluid">(Creator Support)</Link>
       <div>
         {isActive ? <>Connector is: {getName(connector)}</> : "Inactive"}
       </div>

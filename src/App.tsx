@@ -7,19 +7,20 @@ import { FriendsPage } from "./pages/FriendsPage";
 import Navbar from './components/Navbar'
 import { CommunitiesPage } from './pages/CommunitiesPage'
 import { DiscordPage } from "./pages/DiscordPage";
+import Superfluid from "./components/Superfluid/Superfluid";
 
 const App = () => {
   return (
-	  <>
-	<Navbar />
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/FriendsPage" element={<FriendsPage />} />
-	    <Route path="/CommunitiesPage" element={<CommunitiesPage />} />
-      <Route path="/DiscordPage" element={<DiscordPage />} />
-    </Routes>
-	</>
-
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/FriendsPage" element={<FriendsPage />} />
+        <Route path="/Superfluid" element={<Superfluid />} />
+        <Route path="/CommunitiesPage" element={<CommunitiesPage />} />
+        <Route path="/DiscordPage" element={<DiscordPage />} />
+      </Routes>
+    </>
   );
 };
 
