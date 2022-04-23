@@ -12,12 +12,13 @@ const Superfluid = () => {
 
   const { provider } = useWeb3React();
 
-  const [actualFlow, setActualFlow] = useState("");
+  const [actualFlow, setActualFlow] = useState(null);
 
   useEffect(() => {
     async function getData() {
       console.log("getsexecuted");
       const actualFlow = await getFlow();
+      console.log(actualFlow);
       /* @ts-ignore */
       setActualFlow(actualFlow);
     }
@@ -133,6 +134,22 @@ const Superfluid = () => {
     return response;
   }
 
+  async function getStreams() {
+    const { sf, daiTokenContract, signer } = await getSuperfluidFramework();
+
+    const response = await sf.cfaV1.getAccountFlowInfo({
+      superToken: daiTokenContract,
+      account: address,
+      providerOrSigner: signer,
+    });
+
+    type Paging = { take: number; skip?: number; lastId?: string };
+
+    const pageResult = await sf.query.listStreams({ sender: address });
+
+    console.log(pageResult);
+  }
+
   function calculateFlowRate(amount: any) {
     if (typeof Number(amount) !== "number" || isNaN(Number(amount)) === true) {
       alert("You can only calculate a flowRate based on a number");
@@ -179,6 +196,22 @@ const Superfluid = () => {
           }}
         >
           Create stream!
+        </button>
+        <button
+          style={{ marginTop: 8 }}
+          onClick={() => {
+            deleteFlow();
+          }}
+        >
+          Stop Money Stream
+        </button>
+        <button
+          style={{ marginTop: 8 }}
+          onClick={() => {
+            getStreams();
+          }}
+        >
+          Streams
         </button>
       </div>
 
