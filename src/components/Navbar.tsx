@@ -15,7 +15,7 @@ function classNames(...classes: string[]) {
 
 export default function Example() {
   return (
-    <Disclosure as="nav" className="bg-violet-600">
+    <Disclosure as="nav" className="bg-[#7EBDC3]">
       {({ open }) => (
         <>
           <div className="max-w-full mx-auto px-2 sm:px-6 lg:px-8">
@@ -34,14 +34,14 @@ export default function Example() {
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
                   <img
-                    className="block lg:hidden h-8 w-auto text-white"
-                    src=""
-                    alt="F3Bridge"
+                    className="block lg:hidden h-8 w-auto text-white rounded-2xl shadow-sm"
+                    src="https://i.imgur.com/gGtBm3F.jpeg"
+                    alt="F3Blogo"
                   />
                   <img
-                    className="hidden lg:block h-8 w-auto text-white"
-                    src=""
-                    alt="F3Bridge"
+                    className="hidden lg:block h-8 w-auto text-white rounded-2xl shadow-sm"
+                    src="https://i.imgur.com/gGtBm3F.jpeg"
+                    alt="F3Blogo"
                   />
                 </div>
                 <div className="hidden sm:block sm:ml-6">
@@ -71,7 +71,7 @@ export default function Example() {
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
                 </button>*/}
 
-				<button type="button" className='bg-transparent hover:bg-violet-700 hover:text-white py-2 px-4 border border-gray-200 hover:border-gray-900 rounded'>
+				<button type="button" className='bg-transparent hover:bg-violet-700 hover:text-white py-2 px-4 border border-gray-200 hover:border-gray-900 rounded shadow-sm'>
 					<span className='text-white font-medium'>Connect Wallet</span>
 				</button>
 
