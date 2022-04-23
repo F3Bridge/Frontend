@@ -4,7 +4,7 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const navigation = [
 //  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Profile', href: '#', current: false },
+//  { name: 'Profile', href: '/HomePage', current: false },
   { name: 'Frens', href: '/FriendsPage', current: false },
   { name: 'Communities', href: '/CommunitiesPage', current: false },
   { name: 'Discord', href: '/DiscordPage', current: false },
