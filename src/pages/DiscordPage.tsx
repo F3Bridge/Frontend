@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 import { Web3Provider } from "@ethersproject/providers";
 import { ConnectionModal } from "../components/ConnectionModal";
 
+import Navbar from '../components/Navbar'
+
+
 export function DiscordPage() {
   const { provider, isActive } = useWeb3React();
   const [modalShown, setModalShown] = useState(false);
@@ -71,7 +74,13 @@ export function DiscordPage() {
   }
 
   return (
+<<<<<<< HEAD
+    <>
+    <Navbar/>
+    <div className="min-h-screen text-xl text-gray-600">
+=======
     <div className="mt-4 bg-gray-200 rounded-xl">
+>>>>>>> main
       {!isActive ? (
         <div>
           <button onClick={() => setModalShown(true)}>Auth</button>
@@ -83,5 +92,6 @@ export function DiscordPage() {
         <button onClick={authorize}>Test</button>
       )}
     </div>
+    </>
   );
 }

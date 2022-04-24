@@ -6,12 +6,21 @@ import { ConnectionModal } from "./ConnectionModal";
 import { Web3Provider } from "@ethersproject/providers";
 
 const navigation = [
+<<<<<<< HEAD
+//  { name: 'Dashboard', href: '#', current: true },
+//  { name: 'Profile', href: '/HomePage', current: false },
+  { name: 'Frens', href: '/FriendsPage', current: false },
+  { name: 'Communities', href: '/CommunitiesPage', current: false },
+  { name: 'Discord', href: '/DiscordPage', current: false },
+]
+=======
   //  { name: 'Dashboard', href: '#', current: true },
   { name: "Profile", href: "#", current: false },
   { name: "Frens", href: "/FriendsPage", current: false },
   { name: "Communities", href: "/CommunitiesPage", current: false },
   { name: "Discord", href: "/DiscordPage", current: false },
 ];
+>>>>>>> main
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
