@@ -16,6 +16,9 @@ import { BsArrowDownCircle } from "react-icons/bs";
 // import { Web3Auth } from "../connectors/web3auth";
 
 import F3BridgeLogo from "../../f3bridge.png"
+import { FriendsPage } from './FriendsPage';
+
+const LensLogo = "https://icodrops.com/wp-content/uploads/2022/02/LensProtocol_logo-1.jpeg"
 
 const HomeSectionContainer = tw(Element)`
 		flex
@@ -36,8 +39,6 @@ const LandingSectionContainer = styled.div`
 		h-screen
 		flex
 		flex-col
-		overflow-x-hidden
-		overflow-y-hidden
 	`}
 `
 const Logo = styled.div`
@@ -46,9 +47,10 @@ const Logo = styled.div`
 		p-[5rem]
 		//background-image[url(https:/\\/s2.favim.com/orig/150811/clouds-gif-pink-purple-Favim.com-3096843.gif)]
 		background-image[url(https:/\\/i.imgur.com/gGtBm3F.jpeg)]
-		bg-auto
+		bg-contain
 		bg-center
 		w-screen
+		hover:bg-auto
 		blur-md
 		text-[200px]
 		//tracking-[-.12em]
@@ -108,69 +110,61 @@ function getName(connector: Connector) {
   if (connector instanceof CoinbaseWallet) return "Coinbase Wallet";
   return "Unknown";
 }
-export function HomePage() {
+export function HomePage2() {
   const { connector, isActive, provider } = useWeb3React();
   const [modalShown, setModalShown] = useState(false);
   return (
-	<HomeSectionContainer name="Home">
-		<img src={F3BridgeLogo} alt="logo" width={100} height={100} />
+	<HomeSectionContainer name="HomePage2">
+		{/*<img src={F3BridgeLogo} alt="logo" width={100} height={100} />
 		<LandingSectionContainer>
 			<Logo>
 				F3BRIDGE
-			</Logo>
-			<p className="flex pb-8 justify-center text-lg text-white/90">
-			F3Bridge is a tool to bridge your existing Web2 groups and friends from Discord to the Web3 Lens Protocol.
+			</Logo>*/}
+			<div className="ml-64 mr-64">
+			<p className="flex pb-8 justify-center text-4xl font-bold text-white/100">
+			FAQ
 			</p>
-			<p className="flex justify-center text-lg text-white/80 mt-4">
+			<p className="flex pb-8 justify-center text-lg font-bold text-white/90">
+			Why not decentralize the registry?
+			</p>
 
-			A Discord bot allows you to connect to your Discord account,
-			to discover friends who already have a Web3 (Lens Protocol) social profile.
+			<p className="flex pb-8 align-middle text-md font-medium text-white/90 ">
+			In theory, we could decentralize the Discord profile to Lens profile mapping.
+		    For example by enabling users to publish the hash of their Discord username into their Lens profile
+		    and then searching for matching profiles on-chain. <br className="mt-2"/>
+		    However, it would be hard to independently verify the claim that they indeed own that Discord profile,
+		    and are not impersonating another user. <br className="mt-2"/>
+		    Therefore, we use a trusted registry that verifies Discord and web3 ownership at the same time.
+		    Transitioning from web2 to web3 inevitably will require some centralized registries, but the good news is
+		    that once you and your friends and communities are set up on Web3, you can from then on fully determine what you publish,
+		    what you want to consume and/or moderate, without any risks of being deplatformed or monetized without your explicit permission.
 			</p>
-			Web3
+			</div>
+
 		<div className="flex text-white text-2xl justify-center mt-12 shadow-2xl">
-			<ul className="flex justify-center mt-28">
-         <li className="text-white/80">Scroll</li>
-         <li className="text-white/50">Down</li>
-         <li className="text-white/20">Fren</li>
 
-		 </ul>
 		 </div>
-			<ViewMoreButton>
-				<Link to="HomePage2" smooth={"easeInOutQuad"} duration={1500}>
-					<BsArrowDownCircle />
-				</Link>
-			</ViewMoreButton>
-		</LandingSectionContainer>
+		 <form>
+			<Link to="FriendsPage">
+				<div className="flex justify-center lg:mt-36">
+				<button className="text-[#c6dda5] border-4 font-medium text-8xl rounded-md border-white/50" type="button">
+					Enter App
+				</button>
+				</div>
+
+			</Link>
+			</form>
+
+			<div className="flex lg:space-x-80 absolute bottom-0 flex-row space-x-10 justify-center">
+			<img src="https://icodrops.com/wp-content/uploads/2022/02/LensProtocol_logo-1.jpeg" width="200" height="200"/>
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Ipfs-logo-1024-ice-text.png/768px-Ipfs-logo-1024-ice-text.png" width="200" height="200"/>
+			<img src="https://cryptologos.cc/logos/polygon-matic-logo.png" width="200"/>
+			<img src="https://seeklogo.com/images/W/walletconnect-logo-EE83B50C97-seeklogo.com.png" width="200" />
+			</div>
 	</HomeSectionContainer>
 
 
     //<>
-    //<div className="bg-[#dff2d80]">
-    //<img src={F3BridgeLogo} alt="logo" boxSize="200px" />
-    //      <h1>
-    //        F3Bridge
-    //      </h1>
-    //    <div>
-    //      F3Bridge is a tool to bridge your existing Web2 groups and friends from Discord to the Web3 Lens Protocol.
-    //      </div>
-
-
-    //      <h2>Technologies used</h2>
-    //      <h3>Web2</h3>
-    //      <h4>Discord</h4>
-    //      <div>
-    //        A Discord bot allows you to connect to your Discord account,
-    //        <br /> to discover friends who already have a Web3 (Lens Protocol) social profile.
-
-    //      </div>
-
-    //      <h2>Web3</h2>
-    //      <ul>
-    //      <li>Lens Protocol</li>
-    //      <li>IPFS</li>
-    //      <li>WalletConnect</li>
-    //      <li>Polygon</li>
-    //      </ul>
     //      <h2>FAQ</h2>
     //      <h3>
     //        Why not decentralize the registry?
