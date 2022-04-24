@@ -112,6 +112,7 @@ export function HomePage() {
   const { connector, isActive, provider } = useWeb3React();
   const [modalShown, setModalShown] = useState(false);
   return (
+<<<<<<< HEAD
 	<HomeSectionContainer name="Home">
 		<img src={F3BridgeLogo} alt="logo" width={100} height={100} />
 		<LandingSectionContainer>
@@ -193,5 +194,14 @@ export function HomePage() {
     //      </div>
     //  </div>
     //</>
+=======
+    <div className="min-h-screen text-xl text-pink-700 bg-yellow-300">
+      <Link to="/friends">(Click here to go to friendSsS page)</Link>
+      <div>
+        {isActive ? <>Connector is: {getName(connector)}</> : "Inactive"}
+      </div>
+      <button onClick={() => setModalShown(true)}>Connect!</button>
+    </div>
+>>>>>>> main
   );
 }
