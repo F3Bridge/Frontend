@@ -121,7 +121,8 @@ export function HomePage2() {
 				F3BRIDGE
 			</Logo>*/}
 			<div className="ml-64 mr-64">
-			<p className="flex pb-8 justify-center text-4xl font-bold text-white/100">
+			<p className="flex pb-8 justify-center text-4xl font-bold text-white/100 line-through
+			">
 			FAQ
 			</p>
 			<p className="flex pb-8 justify-center text-lg font-bold text-white/90">
@@ -144,16 +145,29 @@ export function HomePage2() {
 		<div className="flex text-white text-2xl justify-center mt-12 shadow-2xl">
 
 		 </div>
-		 <form>
+
+		 {/*<form>
 			<Link to="FriendsPage">
 				<div className="flex justify-center lg:mt-36">
-				<button className="text-[#c6dda5] border-4 font-medium text-8xl rounded-md border-white/50" type="button">
+				<button className="text-[#c6dda5] border-4 font-medium text-8xl rounded-md border-white/50
+
+				" type="button">
 					Enter App
 				</button>
 				</div>
 
 			</Link>
-			</form>
+			</form>*/}
+
+<div className="flex items-center bg-black justify-center w-screen ">
+  <div className="relative group w-full lg:mt-96">
+    <div className="animate-tilt  transition group-hover:duration-200 duration-500 group-hover:opacity-100 opacity-75 absolute rounded-lg -inset-0.5 bg-gradient-to-r from-green-400/80 via-violet-400/20 to-blue-500 filter blur"></div>
+    <button className="relative w-screen py-4 leading-none bg-black divide-x divide-gray-600 rounded-lg px-7">
+      <span className="pr-6  text-gray-100 text-xl font-extrabold">Enter App</span>
+
+    </button>
+  </div>
+</div>
 
 			<div className="flex lg:space-x-80 absolute bottom-0 flex-row space-x-10 justify-center">
 			<img src="https://icodrops.com/wp-content/uploads/2022/02/LensProtocol_logo-1.jpeg" width="200" height="200"/>
